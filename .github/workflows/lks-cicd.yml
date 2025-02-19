@@ -72,3 +72,6 @@ jobs:
 
           EB_ENV_NAME: ${{ secrets.EB_ENV_NAME }}
           EB_APP_NAME: ${{ secrets.EB_APP_NAME }}
+
+          API_GATEWAY_URL: ${{ secrets.API_GATEWAY_URL }}
+          EFS_PATH: ${{ secrets.EFS_PATH }}
