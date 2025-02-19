@@ -9,12 +9,12 @@ load_dotenv()
 app = Flask(__name__)
 
 # Konfigurasi AWS
-AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
-AWS_SESSION_TOKEN = os.getenv("AWS_SESSION_TOKEN")
-AWS_REGION = os.getenv("AWS_REGION")
-S3_BUCKET = os.getenv("S3_BUCKET_NAME")
-API_URL = os.getenv("API_GATEWAY_URL")
+AWS_ACCESS_KEY_ID = process.env.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = process.env.getenv("AWS_SECRET_ACCESS_KEY")
+AWS_SESSION_TOKEN = process.env.getenv("AWS_SESSION_TOKEN")
+AWS_REGION = process.env.getenv("AWS_REGION")
+S3_BUCKET = process.env.getenv("S3_BUCKET_NAME")
+API_URL = process.env.getenv("API_GATEWAY_URL")
 
 s3_client = boto3.client(
     "s3",
